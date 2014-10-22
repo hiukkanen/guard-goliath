@@ -1,0 +1,5 @@
+guard 'goliath' do
+  watch('Gemfile.lock')
+  watch(%r{*.rb})
+end
+
