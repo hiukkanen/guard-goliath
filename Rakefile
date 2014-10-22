@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler/gem_tasks'
 
-require File.expand_path('../lib/guard/rack/version', __FILE__)
+require File.expand_path('../lib/guard/goliath/version', __FILE__)
 
 begin
   Bundler.setup(:default, :development)
