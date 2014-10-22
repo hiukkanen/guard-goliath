@@ -44,6 +44,7 @@ module Guard
         '--port', options[:port].to_s
       )
       command << '--daemonize' if options[:daemon]
+      command << '-sv' unless options[:supress_output]
 
       command
     end

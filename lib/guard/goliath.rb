@@ -13,7 +13,8 @@ module Guard
         start_on_start: true,
         force_run: false,
         timeout: 20,
-        app_file: 'app.rb'
+        app_file: 'app.rb',
+        supress_output: false
       }
 
     def initialize(watchers = [], options = {})
