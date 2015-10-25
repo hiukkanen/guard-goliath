@@ -1,10 +1,9 @@
 require 'guard'
-require 'guard/guard'
 require 'guard/goliath/runner'
 require 'rbconfig'
 
 module Guard
-  class Goliath < ::Guard::Guard
+  class Goliath < Plugin
     attr_reader :options, :runner
 
     DEFAULT_OPTIONS = {
@@ -17,7 +16,7 @@ module Guard
         supress_output: false
       }
 
-    def initialize(watchers = [], options = {})
+    def initialize(options = {})
       super
       @options = DEFAULT_OPTIONS.merge(options)
       @runner = ::Guard::GoliathRunner.new(@options)
