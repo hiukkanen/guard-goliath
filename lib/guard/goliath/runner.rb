@@ -45,6 +45,7 @@ module Guard
       )
       command << '--daemonize' if options[:daemon]
       command << '-sv' unless options[:supress_output]
+      command.push('--config', options[:config]) if options[:config]
 
       command
     end
